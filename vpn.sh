@@ -19,7 +19,7 @@ cp /etc/openvpn/easy-rsa/vars.example /etc/openvpn/easy-rsa/vars
 
 # Kemudian edit file variabel easy-rsa
 # nano /etc/openvpn/easy-rsa/vars
-wget -O /etc/openvpn/easy-rsa/vars "https://raw.githubusercontent.com/izinrecode/AutoScriptSSH/main/vars.conf"
+wget -O /etc/openvpn/easy-rsa/vars "https://raw.githubusercontent.com/lihin929/AutoScriptSSH/main/vars.conf"
 # edit projek export KEY_NAME="vpn"
 # Save dan keluar dari editor
 
@@ -27,7 +27,7 @@ wget -O /etc/openvpn/easy-rsa/vars "https://raw.githubusercontent.com/izinrecode
 openssl dhparam -out /etc/openvpn/dh2048.pem 2048
 
 # install openvpn
-wget -O /etc/openvpn/vpn.zip "https://github.com/izinrecode/AutoScriptSSH/raw/main/vpn.zip"
+wget -O /etc/openvpn/vpn.zip "https://github.com/lihin929/AutoScriptSSH/raw/main/vpn.zip"
 cd /etc/openvpn/
 unzip vpn.zip
 rm -f vpn.zip
@@ -88,7 +88,7 @@ mkdir -p /usr/lib/openvpn/
 cp /usr/lib/x86_64-linux-gnu/openvpn/plugins/openvpn-plugin-auth-pam.so /usr/lib/openvpn/openvpn-plugin-auth-pam.so
 
 # nano /etc/default/openvpn
-sed -i 's/#AUTOSTART="all"/AUTOSTART="all"/g' /etc/default/openvpn
+sed -i 's/AUTOSTART="all"/AUTOSTART="all"/g' /etc/default/openvpn
 # Cari pada baris #AUTOSTART=”all” hilangkan tanda pagar # didepannya sehingga menjadi AUTOSTART=”all”. Save dan keluar dari editor
 
 # restart openvpn dan cek status openvpn
@@ -97,7 +97,7 @@ sed -i 's/#AUTOSTART="all"/AUTOSTART="all"/g' /etc/default/openvpn
 
 # aktifkan ip4 forwarding
 echo 1 > /proc/sys/net/ipv4/ip_forward
-sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
+sed -i 's/net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 # edit file sysctl.conf
 # nano /etc/sysctl.conf
 # Uncomment hilangkan tanda pagar pada #net.ipv4.ip_forward=1
@@ -111,7 +111,7 @@ cd clientconfig
 cd /etc/openvpn
 cat > /etc/openvpn/client-udp-1194.ovpn <<-END
 ############## WELCOME TO ###############
-##########   JOMBLOSSH.TECH  ###########
+##########   LIHIN  ###########
 ####### DONT FORGET TO SUPPORT US #######
 client
 dev tun
@@ -132,7 +132,7 @@ sed -i $MYIP2 /etc/openvpn/client-udp-1194.ovpn;
 # Buat config client TCP 1194
 cat > /etc/openvpn/client-tcp-1194.ovpn <<-END
 ############## WELCOME TO ###############
-########## JOMBLOSSH.TECH ###########
+########## LIHIN ###########
 ####### DONT FORGET TO SUPPORT US #######
 client
 dev tun
@@ -153,7 +153,7 @@ sed -i $MYIP2 /etc/openvpn/client-tcp-1194.ovpn;
 # Buat config client UDP 2200
 cat > /etc/openvpn/client-udp-2200.ovpn <<-END
 ############## WELCOME TO ###############
-########## HABLESSH.TECH ###########
+########## LIHIN929 ###########
 ####### DONT FORGET TO SUPPORT US #######
 client
 dev tun
@@ -174,7 +174,7 @@ sed -i $MYIP2 /etc/openvpn/client-udp-2200.ovpn;
 # Buat config client TCP 2200
 cat > /etc/openvpn/client-tcp-2200.ovpn <<-END
 ############## WELCOME TO ###############
-########## HABLESSH.TECH ###########
+########## LIHIN ###########
 ####### DONT FORGET TO SUPPORT US #######
 client
 dev tun
@@ -195,7 +195,7 @@ sed -i $MYIP2 /etc/openvpn/client-tcp-2200.ovpn;
 # Buat config client SSL
 cat > /etc/openvpn/client-tcp-ssl.ovpn <<-END
 ############## WELCOME TO ###############
-########## JOMBLOSSH.TECH ###########
+########## LIHIN ###########
 ####### DONT FORGET TO SUPPORT US #######
 client
 dev tun
