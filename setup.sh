@@ -25,8 +25,8 @@ echo "Ketikkan Perintah addhost setelah proses instalasi Script Selesai"
 read -p "Hostname / Domain: " host
 echo "$host" >> /var/lib/premium-script/ipvps.conf 
 echo "$host" >> /etc/v2ray/domain
-wget https://raw.githubusercontent.com/izinrecode/test1/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://raw.githubusercontent.com/izinrecode/test1/main/websocket-python/websocket.sh && chmod +x websocket.sh && screen -S websocket.sh ./websocket.sh
+wget https://raw.githubusercontent.com/izinrecode/AutoScriptSSH/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/izinrecode/AutoScriptSSH/main/websocket-python/websocket.sh && chmod +x websocket.sh && screen -S websocket.sh ./websocket.sh
 #wget https://raw.githubusercontent.com/izinrecode/AutoScriptSSH/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 #wget https://raw.githubusercontent.com/4hidessh/baru/main/installer/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 wget https://raw.githubusercontent.com/izinrecode/AutoScriptSSH/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
