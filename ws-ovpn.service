@@ -1,6 +1,6 @@
 [Unit]
-Description=Websocket-SSH By JOMBLOSSH
-Documentation=https://jomblossh.tech
+Description=Websocket-SSH By lihin
+Documentation=https://harustegar.xyz
 After=network.target nss-lookup.target
 
 [Service]
