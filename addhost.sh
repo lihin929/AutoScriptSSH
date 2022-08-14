@@ -8,9 +8,9 @@ rm /etc/v2ray/domain
 rm /var/lib/premium-script/ipvps.conf
 DOMAIN=aliratuqvpn.xyz
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.aliratuqvpn.xyz
-CF_ID=ladrot675@exdonuts.com
-CF_KEY=fe9a1ba40d3498a018fd11e43d5044589bf74
+SUB_DOMAIN=${sub}.harustegar.xyz
+CF_ID=solihinprampampam@gmail.com
+CF_KEY=8322b1c440e4ae464e9faf5969d00edb90ada
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${SUB_DOMAIN}..."
